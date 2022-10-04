@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new bgThread().start();
-//                Toast.makeText(MainActivity.this, "Data Saved!!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Data Saved!!!", Toast.LENGTH_SHORT).show();
+                binding.et1.getText().clear();
+                binding.et2.getText().clear();
             }
         });
 
@@ -45,10 +47,9 @@ public class MainActivity extends AppCompatActivity {
             String lastName = binding.et2.getText().toString();
 
 
-            userDao.insertRecord(new User(1, firstName, lastName));
+            userDao.insertRecord(new User(19, firstName, lastName));        // todo: update the userId unique, everyTime when Run
 
-            binding.et1.setText("");
-            binding.et2.setText("");
+
 
         }
 
