@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 new bgThread().start();
-                Toast.makeText(MainActivity.this, "Data Saved!!!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Data Saved!!!", Toast.LENGTH_SHORT).show();
             }
         });
 
